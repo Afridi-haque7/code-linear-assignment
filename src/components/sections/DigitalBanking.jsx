@@ -223,7 +223,7 @@ export default function DigitalBanking() {
             <div className="relative z-10">
               <PhoneMockup src={mobile1} alt="N7 mobile banking app" />
             </div>
-            <div className="relative z-10 mr-20 mt-20">
+            <div className="relative z-10 lg:mr-20 lg:mt-20">
               <ContentBlock
                 title="Fully compliant with regulatory requirement"
                 description="The governance of risk management with regulations is achieved by our risk management framework that is fully integrated to work with digital bank's operational-risk protocols and procedures."
@@ -237,16 +237,16 @@ export default function DigitalBanking() {
           </div>
 
           {/* ───── Row 2 — vector.png right-half background, phone on right ───── */}
-          <div className="relative mt-20 items-center flex justify-end gap-12 lg:mt-28 lg:gap-16">
+          <div className="relative mt-16 flex flex-col items-center gap-12 lg:mt-28 lg:flex-row lg:justify-end lg:gap-16">
             {/* vector.png — right half visible */}
             <img
               src={vector}
               aria-hidden
-              className="pointer-events-none absolute right-0 top-1/2 z-0 h-[120%] max-w-none -translate-y-1/2 opacity-70"
+              className="pointer-events-none absolute right-0 top-1/2 z-0 hidden h-[120%] max-w-none -translate-y-1/2 opacity-70 lg:block"
               style={{ clipPath: "inset(0 0 0 50%)" }}
             />
 
-            <div className="relative z-10 max-w-70">
+            <div className="relative z-10 w-full max-w-md lg:max-w-70">
               <ContentBlock
                 title="No legacy IT systems"
                 description="Our Digital Banking solution and multilayered approach help financial institutions take advantage of digital transformation by ensuring customer trust and regulatory compliance."
@@ -257,7 +257,7 @@ export default function DigitalBanking() {
                 ]}
               />
             </div>
-            <div className="relative z-10 mr-16">
+            <div className="relative z-10 lg:mr-16">
               <PhoneMockup
                 src={mobile2}
                 alt="No legacy IT systems"
@@ -287,7 +287,7 @@ export default function DigitalBanking() {
                 delay={0.1}
               />
             </div>
-            <div className="relative z-10 max-w-70">
+            <div className="relative z-10 w-full max-w-md lg:max-w-70">
               <ContentBlock
                 title="No traditional branches"
                 description="Our Digital Banking out-of-the-box helps you to accelerate innovation while reducing risks and optimising operational costs for a seamless branchless experience."

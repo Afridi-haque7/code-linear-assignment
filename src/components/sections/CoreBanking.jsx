@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { useIsDesktop } from "@/lib/useIsDesktop";
 import analytics1 from "@/assets/cards/analytics1.png";
 
 const fadeUp = {
@@ -18,6 +19,8 @@ const fadeUp = {
 };
 
 export default function CoreBanking() {
+  const isDesktop = useIsDesktop();
+
   return (
     <section className="relative overflow-hidden py-24 lg:py-32">
       {/* Giant outlined "CB7" background text — positioned per Figma spec */}
@@ -106,8 +109,8 @@ export default function CoreBanking() {
 
           {/* Right — dashboard placeholder */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 180 }}
+            initial={{ opacity: 0, x: isDesktop ? 30 : 0 }}
+            whileInView={{ opacity: 1, x: isDesktop ? 180 : 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="relative"

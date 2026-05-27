@@ -162,8 +162,8 @@ export default function CaseStudies() {
         </div>
 
         {/* Controls row */}
-        <div className="mt-12 grid grid-cols-3 items-center gap-4">
-          <div /> {/* spacer */}
+        <div className="mt-12 flex flex-col items-center gap-6 sm:grid sm:grid-cols-3 sm:gap-4">
+          <div className="hidden sm:block" /> {/* spacer */}
           <div className="flex items-center justify-center gap-4">
             <NavButton direction="prev" onClick={prev} />
             <div className="flex items-center gap-1.5">

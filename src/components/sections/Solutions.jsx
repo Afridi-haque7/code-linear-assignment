@@ -133,9 +133,9 @@ export default function Solutions() {
   return (
     <section className="relative py-24 sm:py-32 lg:py-40">
       <Container>
-        <div className="flex justify-between gap-16 lg:gap-20">
+        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-20">
           {/* Left column — heading + CTA */}
-          <div className="basis-1/2 lg:sticky lg:top-32 lg:self-start">
+          <div className="lg:basis-1/2 lg:sticky lg:top-32 lg:self-start">
             <motion.h2
               variants={fadeUp}
               initial="hidden"
@@ -167,7 +167,7 @@ export default function Solutions() {
           </div>
 
           {/* Right column — 2-column card grid */}
-          <div className="basis-1/2 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 sm:gap-x-16">
+          <div className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 sm:gap-x-16 lg:basis-1/2">
             {SOLUTIONS.map((s, i) => (
               <SolutionCard key={s.title} {...s} index={i} />
             ))}

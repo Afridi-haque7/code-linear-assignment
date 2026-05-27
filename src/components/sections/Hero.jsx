@@ -28,7 +28,7 @@ function BalanceCard() {
       animate={{ opacity: 1, x: -80, y: 10 }}
       transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
       style={{ borderRadius: 12 }}
-      className="absolute top-5.75 left-88.25 z-20 h-44.25 w-72 object-cover drop-shadow-2xl"
+      className="absolute top-5.75 left-88.25 z-20 hidden h-44.25 w-72 object-cover drop-shadow-2xl lg:block"
     />
   );
 }
@@ -42,7 +42,7 @@ function ActivityCard() {
       animate={{ opacity: 1, x: -80, y: 20 }}
       transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
       style={{ borderRadius: 12 }}
-      className="absolute top-37.5 -left-7 z-20 h-29.25 w-63.5 object-cover drop-shadow-2xl"
+      className="absolute top-37.5 -left-7 z-20 hidden h-29.25 w-63.5 object-cover drop-shadow-2xl lg:block"
     />
   );
 }
@@ -83,9 +83,9 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-20 pb-20 sm:pt-20 lg:pt-32 lg:pb-48">
       <Container className={``}>
-        <div className="flex w-full justify-between gap-24">
+        <div className="flex w-full flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-24">
           {/* Text column */}
-          <div className="text-center lg:text-left max-w-2xl">
+          <div className="max-w-2xl text-center lg:text-left">
             <motion.h1
               variants={fadeUp}
               initial="hidden"
@@ -130,19 +130,19 @@ export default function Hero() {
               initial="hidden"
               animate="show"
               custom={3}
-              className="mt-32"
+              className="mt-16 sm:mt-20 lg:mt-32"
             >
               <p className="text-md font-bold text-white/75">Trusted By:</p>
               <img
                 src={logo1}
                 alt="Trusted by partner logos"
-                className="mt-5 block"
+                className="mt-5 mx-auto block max-w-full lg:mx-0"
               />
             </motion.div>
           </div>
 
           {/* Visual column */}
-          <div className="pt-8 mr-20">
+          <div className="pt-8 lg:mr-20">
             <HeroVisual />
           </div>
         </div>

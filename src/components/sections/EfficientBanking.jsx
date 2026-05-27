@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Container from "@/components/ui/Container";
+import { useIsDesktop } from "@/lib/useIsDesktop";
 import analytics2 from "@/assets/cards/analytics2.png";
 
 const FEATURES = [
@@ -49,6 +50,8 @@ function FeatureItem({ children, index }) {
 }
 
 export default function EfficientBanking() {
+  const isDesktop = useIsDesktop();
+
   return (
     <section className="relative overflow-hidden py-24 lg:py-32">
       <Container>
@@ -56,7 +59,7 @@ export default function EfficientBanking() {
           {/* Left — laptop mockup */}
           <motion.div
             initial={{ opacity: 0, x: 0 }}
-            whileInView={{ opacity: 1, x: -180 }}
+            whileInView={{ opacity: 1, x: isDesktop ? -180 : 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="relative lg:-ml-16"

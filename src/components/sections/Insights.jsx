@@ -110,9 +110,9 @@ export default function Insights() {
       />
 
       <Container>
-        <div className=" gap-12 flex justify-between lg:gap-28">
+        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-28">
           {/* Left — heading + Insights button */}
-          <div className="lg:pt-2 max-w-120">
+          <div className="max-w-120 lg:pt-2">
             <motion.h2
               variants={fadeUp}
               initial="hidden"
